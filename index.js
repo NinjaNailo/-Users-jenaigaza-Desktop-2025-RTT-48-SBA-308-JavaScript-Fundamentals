@@ -142,12 +142,14 @@ console.log(getLearnerData);
 
 function getLearnerData(course, ag, submissions) {
   // the assignment group must belong to the course
-  if (!course || !ag || ag.course_id !== course.id) 
-    throw new Error("AssignmentGroup does not belong to the provided Course.");
-
+ const result = [];
   
- let assignmentsById = {};
-  for (var i = 0; i < ag.assignments.length; i++) {
-    var a = ag.assignments[i];
-    assignmentsById[a.id] = a;}
-    console.log(getLearnerData);}
+if (AssignmentGroup){
+  id: 12345,
+  name: string,
+  // the ID of the course the assignment group belongs to
+  course_id: 451,
+  // the percentage weight of the entire assignment group
+  "group_weight": 25,
+  "assignments": ["Declare a Variable"],
+}
