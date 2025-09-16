@@ -142,14 +142,31 @@ console.log(getLearnerData);
 
 function getLearnerData(course, ag, submissions) {
   // the assignment group must belong to the course
- const result = [];
+  const result = [];
+  // Define dueAssignments based on assignments that are due
+  const now = new Date();
+  const dueAssignments = ag.assignments.filter(a => new Date(a.due_at) <= now);
+
+  dueAssignments.forEach(a => {
+    {}[a.id] = a.points_possible;
+  });
+
+  return result;
+};
+ let assignmentsById = {};
+  for (var i = 0; i < ag.assignments.length; i++) {
+    var a = ag.assignments[i];
+    assignmentsById[a.id] = a;}
+
+const now = new Date();
+    for (let i = 0; i <LearnerSubmissions.length; 1++) {
+      const s = LearnerSubmissions[i];
+    } {
+      return assignmentsById
+    }
+    
+
+
+
   
-if (AssignmentGroup){
-  id: 12345,
-  name: string,
-  // the ID of the course the assignment group belongs to
-  course_id: 451,
-  // the percentage weight of the entire assignment group
-  "group_weight": 25,
-  "assignments": ["Declare a Variable"],
-}
+
